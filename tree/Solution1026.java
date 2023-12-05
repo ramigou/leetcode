@@ -1,6 +1,12 @@
 package tree;
 
 class Solution1026 {
+    public int maxAncestorDiff(TreeNode root) {
+        if (root == null) return 0;
+
+        return dfs(root, root.val, root.val);
+    }
+
     public int dfs(TreeNode root, int min, int max) {
         if (root == null) return max - min;
 
